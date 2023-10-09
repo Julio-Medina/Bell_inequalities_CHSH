@@ -45,6 +45,21 @@ Maestría en Física\\
 El Teorema de Bell y las desigualdades asociadas fueron de gran importancia para establecer la validez de las correlaciones que se dan en la mecánica cuántica, con este se logró esclarecer la paradoja de Einstein-Podolsky-Rosen sobre teorías de variables ocultas y la no-localidad de la teoría cuántica. Para establecer la validez experimental de los resultados de Bell, Clauser, Horne, Shimony y Holt derivaron las desigualdades CHSH que al igual que las desigualdades de Bell poné restricciones en las ocurrencias estadísticas de una \say{prueba de Bell}. Estas confirmaciones experimentales pueden realizarse por medio de un circuito cuántico, en este reporte se expande en todo el desarrollo teórico y se implementan los circuitos por medio de Qiskit para comprobar que la naturaleza viola las desigualdades CHSH.
 \end{abstract}
 
+\section{Correlaciones en las mediciones de spin y las desigualdades de Bell}
+El ejemplo más simple de adición de momento angular en sistemas compuestos de varias partículas en Mecánica Cuántica es el caso de spin $\frac{1}{2}$ ver por ejemplo \cite{Sakurai}, este sistema se usa para demostrar uno de los efectos de la mecánica cuántica más sorprendentes y que ha causado controversias y discusiones científicas famosas i.e. La paradoja de Eistein, Podolsky y Rosen, ver \cite{Einstein}, \cite{Bell}.\\
+
+Considerando un sistema de dos electrones en un estado \textit{spin-singlet}, i.e. con spin total igual a $0$. El estado puede escribirse cómo 
+
+\begin{equation}\label{eq::singlet_state}
+|\text{\textit{spin-singlet}}\rangle=\frac{1}{\sqrt{2}}\big( |\mathbf{\hat{z}}+;\mathbf{\hat{z}}-\rangle -|\mathbf{\hat{z}}-;\mathbf{\hat{z}}+\rangle  \big)
+\end{equation}
+donde se ha especificado explícitamente la dirección de cuantización, para hacer una reseña se recuerda que en $|\mathbf{\hat{z}}+;\mathbf{\hat{z}}-\rangle$ se interpreta que el primer electrón está en el estado spin ''arriba'' y el segundo está en el estado spin ''abajo'' de manera análoga para $|\mathbf{\hat{z}}-;\mathbf{\hat{z}}+\rangle$ se tiene al primer electrón en el estado spin ''abajo'' y al el segundo está en el estado spin ''arriba''.\\
+Ahora si se realiza una medición sobre el estado definido en \ref{eq::singlet_state} hay una probabilidad $p=0.5$ de encontrar al sistema en un estado ''arriba''  o ''abajo'' ya que el sistema tiene la misma probabilidad de estar en el estado $|\mathbf{\hat{z}}+;\mathbf{\hat{z}}-\rangle$ o $|\mathbf{\hat{z}}-;\mathbf{\hat{z}}+\rangle$. En esta medición si se encuentra a uno de los electrones con un spin ''arriba'' el otro necesariamente tiene que estar en con el spin ''abajo'' y viceversa. Cuando se halla al primer electrón en el estado spin ''arriba'' el aparato de medición a colapsado la función de onda del sistema al estado(en otras palabras el aparato de medición ha seleccionado) el primer término de \ref{eq::singlet_state}, $|\mathbf{\hat{z}}+;\mathbf{\hat{z}}-\rangle$ una medición subsecuente en el spin del segundo electrón debe reafirmar que estado compuesto está dado por $|\mathbf{\hat{z}}+;\mathbf{\hat{z}}-\rangle$.\\
+
+Es impresionante que este tipo de correlación pueda persistir incluso cuando las 2 partículas del sistema estén bastante alejadas una de otro y hayan dejado de interactuar localmente dado que cuando mientras se alejan el movimiento no cambia el spin de las partículas. Este es el caso de un sistema con momento angular $J=0$ que se desintegra espontáneamente es dos partículas de spin $\frac{1}{2}$ sin momento angular orbital relativo, debido a que el momento angular se debe conservar en el proceso de desintegración. Un ejemplo experimental de esto se da en un proceso escaso o raro en el que un mesón $\eta$ con masa $549\frac{\text{MeV}}{c^2}$ decae un par de muones
+\begin{equation}
+\eta\rightarrow\mu^+ + \mu^-
+\end{equation}
 
 \begin{thebibliography}{99}
 %% La bibliografía se ordena en orden alfabético respecto al apellido del 
@@ -56,6 +71,8 @@ El Teorema de Bell y las desigualdades asociadas fueron de gran importancia para
 \bibitem{Bell} J.S. Bell. \textit{On the Einstein Podolski Rosen Paradox}. \url{https://cds.cern.ch/record/111654/files/vol1p195-200_001.pdf}
 
 \bibitem{Clauser} John F. Clauser, Michael A. Horne, Abner Shimony, Richard Holt. \textit{PROPOSED EXPERIMENT TO TEST LOCAL HIDDEN-VARIABLE THEORIES.}. Physical Review Letters,. 23(15):880-4, \url{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.23.880}.
+
+\bibitem{Einstein} Einstein A., B. Podolsky, N. Rosen, \textit{Can Quantum-Mechanical Description of Physical Reality be Considered Complete?}. Physical Review. \url{doi:10.1103/PhysRev.47.777}
 
 \bibitem{Medina} J. Medina. \textit{Reporte de Seminario 1. Computación Cuántica}. \url{https://github.com/Julio-Medina/Seminario/blob/main/Reporte_final/reporte_final.pdf}
 
