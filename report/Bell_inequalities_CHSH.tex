@@ -60,7 +60,24 @@ Es impresionante que este tipo de correlación pueda persistir incluso cuando la
 \begin{equation}
 \eta\rightarrow\mu^+ + \mu^-
 \end{equation}
-
+este proceso es extremadamente raro pero hay otros casos más realisticos cómo la dispersión de protón-protón a bajas energías cinéticas. \\
+Para ser más ilustrativa la deducción y al mismo tiempo más pictórica se considera a un sistema de dos partículas de spin $\frac{1}{2}$ moviéndose en direcciones contrarias cómo se puede en la figura \ref{fig::spin_correlation_spin_singlet}, el observador A se enfoca en medir el componente del spin $S_z$ de la partícula 1 que se mueve hacia la derecha y el observador B se enfoca en medir $S_z$ para la partícula 2 que se mueve hacia la izquierda. Asumiendo el caso en el que el observador A mide una a $S_z$ y obtiene un valor positivo, entonces este observador puede predecir el resultado de la medición que hace el observador B, incluso antes de el observador B realice cualquier medición, el resultado de la medición de B es certeza el valor negativo para $S_z$, por el otro lado si el observador A no realiza ninguna medición entonces hay un $50\%-50\%$ de chance de medir $S_z^+$ o $S_z^-$. Esto incluso podría ser de esperarse, considerando la siguiente analogía: '' es cómo tener un par de guantes uno con orientación derecha y otro con orientación izquierda y se ponen en cajas idénticas aleatoriamente, si alguien abre una caja al azar y encuentra por ejemplo el guante derecho sabrá con certeza que en la otra caja hay un guate izquierdo''. Resulta que está analogía es demasiado sencilla para capturar la sofisticación intrínseca de la mecánica cuántica. En el caso de las partículas se puede elegir una dirección arbitraria del spin y medir por ejemplo medir $S_x$ en lugar de $S_z$, en la analogía no hay manera de medir otra orientación de los guantes y por ejemplo hubiese otra diferencia en los guantes cómo que los guantes tuvieran un color en particular el derecho blanco y el izquierdo negro, en el caso cuántico significaría cambiar los colores de los guantes por ejemplo a un par rojo-azul o verde-amarillo y es ahí donde no se encuentra un sistema clásico análogo al fenómeno cuántico.\\
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.27]{./spin_correlation_spin_singlet.png} 
+\end{center} 
+\caption{Correlación de spin para un estado \textit{spin-singlet}}
+\label{fig::spin_correlation_spin_singlet}
+\end{figure}
+Para un sistema de una partícula de spin $\frac{1}{2}$ se tienen los  eigenkets(vectores propios) $S_x$ y $S_z$ están relacionados de la siguiente manera \footnote{ver\ref{sec::appendix} o \cite{Sakurai}}
+\begin{equation}
+|\mathbf{\hat{x}\pm}\rangle=\frac{1}{\sqrt{2}}\big (|\mathbf{\hat{z}+}\rangle \pm |\mathbf{\hat{z}-}\rangle  \big),\,\,\,\,\,|\mathbf{\hat{z}\pm}\rangle=\frac{1}{\sqrt{2}}\big (|\mathbf{\hat{x}+}\rangle \pm |\mathbf{\hat{x}-}\rangle  \big).
+\end{equation}
+Continuando la discusión con el sistema compuesto, se puede reescribir el estado de spin-singlet \ref{eq::singlet_state} escogiendo al eje $x$ cómo eje de cuantización de la siguiente manera:
+\begin{equation}
+|\text{\textit{spin-singlet}}\rangle=\frac{1}{\sqrt{2}}\big( |\mathbf{\hat{x}}-;\mathbf{\hat{x}}+\rangle -|\mathbf{\hat{x}}+;\mathbf{\hat{x}}-\rangle  \big).
+\end{equation}
+\section{Apéndice}\label{sec::appendix}
 \begin{thebibliography}{99}
 %% La bibliografía se ordena en orden alfabético respecto al apellido del 
 %% autor o autor principal
