@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  29 OCT 2023 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  5 NOV 2023 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -335,9 +335,29 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@dirtytalk@qdepth=\count289
 )
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen160
+\lightrulewidth=\dimen161
+\cmidrulewidth=\dimen162
+\belowrulesep=\dimen163
+\belowbottomsep=\dimen164
+\aboverulesep=\dimen165
+\abovetopsep=\dimen166
+\cmidrulesep=\dimen167
+\cmidrulekern=\dimen168
+\defaultaddspace=\dimen169
+\@cmidla=\count290
+\@cmidlb=\count291
+\@aboverulesep=\dimen170
+\@belowrulesep=\dimen171
+\@thisruleclass=\count292
+\@lastruleclass=\count293
+\@thisrulewidth=\dimen172
+)
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count290
+\l__kernel_color_stack_int=\count294
 \l__pdf_internal_box=\box47
 )
 (./Bell_inequalities_CHSH.aux
@@ -346,37 +366,37 @@ LaTeX Info: Redefining \% on input line 27.
 )
 \openout1 = `Bell_inequalities_CHSH.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Info: Redefining \. on input line 17.
-LaTeX Info: Redefining \% on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Info: Redefining \. on input line 18.
+LaTeX Info: Redefining \% on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen160
+\scratchcounter=\count295
+\scratchdimen=\dimen173
 \scratchbox=\box48
-\nofMPsegments=\count292
-\nofMParguments=\count293
+\nofMPsegments=\count296
+\nofMParguments=\count297
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen161
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen174
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
 \everyMPtoPDFconversion=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -388,7 +408,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 17.
+Package hyperref Info: Link coloring OFF on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -399,34 +419,34 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count297
+\c@section@level=\count301
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 (./Bell_inequalities_CHSH.out) (./Bell_inequalities_CHSH.out)
 \@outlinefile=\write3
 \openout3 = `Bell_inequalities_CHSH.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
+Underfull \hbox (badness 10000) in paragraph at lines 57--60
 
  []
 
@@ -437,10 +457,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--59
 File: ./spin_correlation_spin_singlet.png Graphic file (type png)
 <use ./spin_correlation_spin_singlet.png>
 Package pdftex.def Info: ./spin_correlation_spin_singlet.png  used on input lin
-e 68.
+e 69.
 (pdftex.def)             Requested size: 358.55432pt x 57.72643pt.
 
-Overfull \hbox (13.55432pt too wide) in paragraph at lines 68--69
+Overfull \hbox (13.55432pt too wide) in paragraph at lines 69--70
  [] 
  []
 
@@ -448,53 +468,53 @@ Overfull \hbox (13.55432pt too wide) in paragraph at lines 68--69
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <./spin_correlation_spin_singlet.png>] [4]
-Overfull \hbox (1.70874pt too wide) in paragraph at lines 96--97
+Overfull \hbox (1.70874pt too wide) in paragraph at lines 97--99
 \OT1/cmr/m/n/10 Se di-ce que una part^^S^^Pcu-la que sa-tis-fa-ce es-ta pro-pie
 -dad per-te-ne-ce al ti-po $([]+\OML/cmm/m/it/10 ;  []\OMS/cmsy/m/n/10 ^^@\OT1/
 cmr/m/n/10 )$,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 []\OT1/cmr/m/n/10 J. Me-di-na. \OT1/cmr/m/it/10 Re-por-te de Se-mi-na-rio 1. Co
 mpu-taci^^Son Cu^^Santi-ca\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 []$\OT1/cmtt/m/n/10 https : / / github . com / Julio-[]Medina / Seminario / blo
 b / main / Reporte _
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 125--126
+Underfull \hbox (badness 5681) in paragraph at lines 165--166
 []\OT1/cmr/m/n/10 Yasaman Bah-ri, Jo-nat-han Kad-mon, Jef-frey Pen-ning-ton, Sa
 m S.
  []
 
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
+[6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (./Bell_inequalities_CHSH.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `Bell_inequalities_CHSH.out' has not changed.
 
 (rerunfilecheck)             Checksum: 516AC7F0CDAA1246AC51B8C0AEA6929B;344.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 8163 strings out of 481239
- 121001 string characters out of 5920377
- 409329 words of memory out of 5000000
- 23230 multiletter control sequences out of 15000+600000
+ 8227 strings out of 481239
+ 121851 string characters out of 5920377
+ 415191 words of memory out of 5000000
+ 23285 multiletter control sequences out of 15000+600000
  544566 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,8n,35p,2381b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,35p,2381b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -512,10 +532,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Bell_inequalities_CHSH.pdf (6 pages, 225650 bytes).
+Output written on Bell_inequalities_CHSH.pdf (7 pages, 232217 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
