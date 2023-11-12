@@ -47,7 +47,7 @@ El Teorema de Bell y las desigualdades asociadas fueron de gran importancia para
 \end{abstract}
 
 \section{Correlaciones en las mediciones de spin y las desigualdades de Bell}
-\subsection{Correlaciones en estados \textit{spin-singlests}}
+\subsection{Correlaciones en estados \textit{spin-singlets}}
 El ejemplo más simple de adición de momento angular en sistemas compuestos de varias partículas en Mecánica Cuántica es el caso de spin $\frac{1}{2}$ ver por ejemplo \cite{Sakurai}, este sistema se usa para demostrar uno de los efectos de la mecánica cuántica más sorprendentes y que ha causado controversias y discusiones científicas famosas i.e. La paradoja de Eistein, Podolsky y Rosen, ver \cite{Einstein}, \cite{Bell}.\\
 
 Considerando un sistema de dos electrones en un estado \textit{spin-singlet}, i.e. con spin total igual a $0$. El estado puede escribirse cómo 
@@ -113,10 +113,10 @@ Examinando cómo este modelo relativamente sencillo puede explicar las correlaci
 \end{equation}
 con proporciones iguales, $25\%$ cada una de las porciones de partículas. Se implica una suposición importante en este desarrollo, suponiendo que un par que pertenece al tipo \ref{eq::singlet_state} y el observador A decide hacer una medición del componente $S_z$ de la partícula 1, en este caso se obtiene un  valor positivo independientemente si el observador B decide medir $S_z$ o $S_x$. Es en este sentido en el que se incorpora el principio de localidad de Einstein en el modelo: el resultado de la medición de A está independientemente predeterminado de la elección que el observador B haga en su medición.\\
 En los ejemplos considerados previamente, se han reproducido exitosamente las predicciones de la mecánica cuántica. Considerando situaciones más elaboradas en las que el modelo hace predicciones que difieren de las hechas por la teoría de la mecánica cuántica. En este caso más complejo se tienen tres vectores unitarios $\mathbf{\hat{a}}$, $\mathbf{\hat{b}}$ y $\mathbf{\hat{c}}$, que en general no son mutuamente ortogonales. Se tiene el caso en que una de las partículas pertenece al un grupo definido, por ejemplo $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}+,\,\mathbf{\hat{c}}+)$, que significa que si se mide $\mathbf{S}\cdot \mathbf{\hat{a}}$, se obtiene un medición negativa con certeza; si se mide $\mathbf{S}\cdot \mathbf{\hat{b}}$ se obtiene una medición positiva con certeza y finalmente si se mide $\mathbf{S}\cdot \mathbf{\hat{c}}$ también se obtiene una medición positiva. De manera análoga que el caso en el que sólo se tiene dos direcciones en este caso debe de haber una coincidencia perfecta con la otra partícula, por conservación de momento angular del sistema, es decir que la partícula 2 es del tipo $(\mathbf{\hat{a}}+,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$. En un caso aleatorio cualquiera el par de partículas debe de pertenecer a uno de los ocho tipos que se detallan en la tabla \ref{tab:three_direction_correlations}. Estas ocho posibilidades son mutuamente excluyentes y disjuntas\footnote{Conjuntos sin elementos en común.}. El número de partículas de cada tipo se especifica en la primera columna de la tabla. Para ilustrar cómo se calculan las probabilidades en este experimento se supone que el observador A hace una medición de $\mathbf{S_1}\cdot \mathbf{\hat{a}}$ y obtiene un valor positivo y el observador B hace una medición $\mathbb{S_2}\cdot \mathbf{\hat{b}}$ también positiva entonces es claro que de la tabla \ref{tab:three_direction_correlations} que el par de partículas sólo tiene puede pertenecer a dos grupos, el grupo 3 o el grupo 4 por lo que el número total de pares de partículas es $N_3 + N_4$. Debido a que $N_i\geq 0$, se tienen relaciones de desigualdad del tipo:
-\begin{equation}
+\begin{equation}\label{eq::positivity_condition}
 N_3 + N_4 /geq (N_2 +  N_4) + (N_3 +  N_7)
 \end{equation} 
-Si $P(\mathbf{\hat{a}}+;\,\mathbf{\hat{b}}+)$ es la probabilidad que, en una selección aleatoria el observador A mida $\mathbf{S}\cdot \mathbf{\hat{a}}$ y obtenga $+$ y el observador B mida $\mathbf{S}\cdot \mathbf{\hat{b}}$ y obtenga $+$, y así de manera análoga para todas las otras combinaciones de posibilidades.
+Si $P(\mathbf{\hat{a}}+;\,\mathbf{\hat{b}}+)$ es la probabilidad que, en una selección aleatoria el observador A mida $\mathbf{S}\cdot \mathbf{\hat{a}}$ y obtenga $+$ y el observador B mida $\mathbf{S}\cdot \mathbf{\hat{b}}$ y obtenga $+$, y así de manera análoga para todas las otras combinaciones de posibilidades.	
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|}
@@ -137,6 +137,28 @@ $N_8$ & $(\mathbf{\hat{a}}-,\, \mathbf{\hat{b}}-,\,\mathbf{\hat{c}}-)$ & $(\math
 \end{tabular}
     \label{tab:three_direction_correlations}
 \end{table}
+La probabilidad está dada por 
+\begin{equation}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_4}{\sum_{i=1}^{8} N_i} 
+\end{equation}
+De manera análoga se tiene que 
+\begin{equation}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) = \frac{N_2+N_4}{\sum_{i=1}^{8} N_i} 
+\end{equation}
+y
+\begin{equation}
+P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+) = \frac{N_3+N_7}{\sum_{i=1}^{8} N_i} 
+\end{equation}
+la condición de positividad del número de poblaciones en cada tipo \ref{eq::positivity_condition} da cómo resultado
+\begin{equation}\label{eq::Bell_inequality}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+) \geq P(\mathbf{\hat{a}}+;\, \mathbf{\hat{c}},+) + P(\mathbf{\hat{c}}+;\, \mathbf{\hat{b}},+)  
+\end{equation}
+Está es la \textbf{desigualdad de Bell}, que es una consecuencia del principio de localidad de Einstein.
+
+\subsection{Desigualdad de Bell y Mecánica Cuántica}
+En el punto de vista de la Mecánica Cuántica no se habla de una fracción de pares de partículas por ejemplo $\frac{N_3}{\sum_{i=1}^{8} N_i}$ pertenecientes al tipo 3, en lugar de esto se caracteriza todos los sistemas de \textit{spin-singlet} por el mismo ket \ref{eq::singlet_state}, en este sentido se tiene un ensamble puro(ver Sakurai \cite{Sakurai}). Usando el ket \ref{eq::singlet_state} y las reglas de la mecánica cuántica se pueden calcular las probabilidades de la desigualdad de Bell \ref{eq::Bell_inequality} sin ninguna ambigüedad.\\
+
+Primero se evalúa $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$. Suponiendo que el observador A mide $\mathbf{\hat{S}} \cdot \mathbf{\hat{a}}$ y haya un valor $+$; debido a la correlación perfecta por la conservación del momento angular discutida previamente, la medición del observador B para $\mathbf{\hat{S}} \cdot \mathbf{\hat{b}}$ va a resultar en $-$ con certeza. Pero para calcular $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$ se debe considerar un nuevo eje de cuantización para $\mathbf{\hat{b}}$ con un ángulo $\theta_{ab}$ con respecto a $\mathbf{\hat{a}}$.
 
 \section{Apéndice}\label{sec::appendix}
 \begin{thebibliography}{99}
