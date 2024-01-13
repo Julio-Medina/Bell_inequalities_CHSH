@@ -192,6 +192,21 @@ Por ejemplo, si se toma $\theta=\frac{\pi}{4}$ se obtiene la contradicción
 0.500\leq 0.292
 \end{equation}
 Con esto se puede evidenciar claramente que las predicciones de la mecánica cuántica no son compatibles con la desigualdad de Bell. Hay un observable real(en el sentido que puede verificarse experimentalmente) que difiere entre las predicciones cuánticas y la teoría alternativa que satisface el principio de localidad de Einstein.
+
+\section{Generalización del teorema de Bell}
+\section{Desigualdad CHSH}
+La desigualdad CHSH nombrada por las iniciales de los autores del teorema: Clauser, Horne, Shimony y Holt(ver \cite{Clauser}). Está desigualdad es usada experimentalmente para probar el teorema de Bell(\cite{Bell}). El teorema asegura que las teorías basadas en variables ocultas y el principio de localidad de Einstein no pueden explicar por completo las implicaciones y consecuencias del entrelazamiento en la mecánica cuántica.\\
+
+El premio Nobel 2022 fue galardonado a Alain Aspect, John Clauser y Anton Zellinger por su trabajo de vanguardia en información cuántica y en particular por sus experimentos con fotones entrelazados cuánticamente que demostraron sin lugar a duda la violación de las desigualdades de Bell.\\
+
+Para poder recrear este experimento en el contexto de la computación cuántica se crea un par de qubits entrelazados en dos bases distintas. Se etiqueta a la base del primer qubit $A$ y $a$ y a la segunda base $B$ y $b$. Esto permite computar la cantidad CHSH $S_1$ cómo:
+\begin{equation}
+S_1=A(B-b)+a(B+b)
+\end{equation} 
+cada observable puede tomar los valores $+1$ o $-1$ unicamente. Es claro que cada uno de los términos $B\pm b$ debe ser $0$ y el otro $\pm 2$. Por lo tanto $S_1=\pm 2$. El valor promedio de $S_1$ debe satisfacer la desigualdad
+\begin{equation}\label{eq::CHSH_inequality}
+|\langle S_1 \rangle|\leq 2.
+\end{equation}
 \section{Apéndice}\label{sec::appendix}
 
 \begin{thebibliography}{99}
