@@ -158,9 +158,42 @@ Está es la \textbf{desigualdad de Bell}, que es una consecuencia del principio 
 \subsection{Desigualdad de Bell y Mecánica Cuántica}
 En el punto de vista de la Mecánica Cuántica no se habla de una fracción de pares de partículas por ejemplo $\frac{N_3}{\sum_{i=1}^{8} N_i}$ pertenecientes al tipo 3, en lugar de esto se caracteriza todos los sistemas de \textit{spin-singlet} por el mismo ket \ref{eq::singlet_state}, en este sentido se tiene un ensamble puro(ver Sakurai \cite{Sakurai}). Usando el ket \ref{eq::singlet_state} y las reglas de la mecánica cuántica se pueden calcular las probabilidades de la desigualdad de Bell \ref{eq::Bell_inequality} sin ninguna ambigüedad.\\
 
-Primero se evalúa $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$. Suponiendo que el observador A mide $\mathbf{\hat{S}} \cdot \mathbf{\hat{a}}$ y haya un valor $+$; debido a la correlación perfecta por la conservación del momento angular discutida previamente, la medición del observador B para $\mathbf{\hat{S}} \cdot \mathbf{\hat{b}}$ va a resultar en $-$ con certeza. Pero para calcular $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$ se debe considerar un nuevo eje de cuantización para $\mathbf{\hat{b}}$ con un ángulo $\theta_{ab}$ con respecto a $\mathbf{\hat{a}}$.
+Primero se evalúa $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$. Suponiendo que el observador A mide $\mathbf{\hat{S}} \cdot \mathbf{\hat{a}}$ y haya un valor $+$; debido a la correlación perfecta por la conservación del momento angular discutida previamente, la medición del observador B para $\mathbf{\hat{S}} \cdot \mathbf{\hat{b}}$ va a resultar en $-$ con certeza. Pero para calcular $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$ se debe considerar un nuevo eje de cuantización para $\mathbf{\hat{b}}$ con un ángulo $\theta_{ab}$ con respecto a $\mathbf{\hat{a}}$, ver figura \ref{fig::P_evaluation}. 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.24]{./evaluation_P.png} 
+\end{center} 
+\caption{Evaluación de $P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)$}
+\label{fig::P_evaluation}
+\end{figure}
+De acuerdo al formalismo de la formulación matricial de la mecánica cuántica(ver \cite{Sakurai}), la probabilidad que la medición de $\mathbf{S}_2\cdot \mathbf{\hat{b}}$ de como resultado $+$ cuando se sabe que la partícula 2 es un estado propio(\textit{eigenvalue}) de $\mathbf{S}_2\cdot \mathbf{\hat{a}}$ con valor propio negativo está dado por
+\begin{equation}
+\cos^2\Bigg[\frac{\pi-\theta_{ab}}{2}\Bigg]=\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)
+\end{equation}
+Cómo resultado se obtiene que 
+\begin{equation}\label{eq::P_ab_probability}
+P(\mathbf{\hat{a}}+;\, \mathbf{\hat{b}},+)=\frac{1}{2}\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)
+\end{equation}
+donde el factor $\frac{1}{2}$ surge de la probabilidad inicial de obtener $\mathbf{S}_1\cdot \mathbf{\hat{a}}$ con valor $+$. Usando la expresión \ref{eq::P_ab_probability} y su generalización para los otros 2 términos de \ref{eq::Bell_inequality} se puede reescribir la desigualdad de Bell cómo:
+\begin{equation}\label{eq::Bell_inequality_2}
+\sin^2\bigg(\frac{\theta_{ab}}{2}\bigg)\leq \sin^2\bigg(\frac{\theta_{ac}}{2}\bigg)+\sin^2\bigg(\frac{\theta_{cb}}{2}\bigg)
+\end{equation}
 
+Con este resultado se puede demostrar que la desigualdad \ref{eq::Bell_inequality_2} no siempre se cumple desde un acercamiento geométrico. Por simplicidad se escoge a $\mathbf{\hat{a}}$, $\mathbf{\hat{b}}$ y $\mathbf{\hat{c}}$ a estar en un plano, y se escoge a $\mathbf{\hat{c}}$ de tal manera que bisecte las direcciones definidas por $\mathbf{\hat{a}}$ y $\mathbf{\hat{b}}$, con estas simplificaciones se obtiene:
+\begin{equation}
+\theta_{ab}=2\theta,\,\,\,\,\,\,\,\,\, \theta_{ac}=\theta_{cb}=\theta
+\end{equation}
+La desigualdad \ref{eq::Bell_inequality_2} es violada para
+\begin{equation}
+0<\theta<\frac{\pi}{2}
+\end{equation}
+Por ejemplo, si se toma $\theta=\frac{\pi}{4}$ se obtiene la contradicción
+\begin{equation}
+0.500\leq 0.292
+\end{equation}
+Con esto se puede evidenciar claramente que las predicciones de la mecánica cuántica no son compatibles con la desigualdad de Bell. Hay un observable real(en el sentido que puede verificarse experimentalmente) que difiere entre las predicciones cuánticas y la teoría alternativa que satisface el principio de localidad de Einstein.
 \section{Apéndice}\label{sec::appendix}
+
 \begin{thebibliography}{99}
 %% La bibliografía se ordena en orden alfabético respecto al apellido del 
 %% autor o autor principal
