@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  12 JAN 2024 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  12 JAN 2024 23:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,7 +453,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--60
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./spin_correlation_spin_singlet.png, id=54, 1327.96124pt x 213.79875pt>
+<./spin_correlation_spin_singlet.png, id=58, 1327.96124pt x 213.79875pt>
 File: ./spin_correlation_spin_singlet.png Graphic file (type png)
 <use ./spin_correlation_spin_singlet.png>
 Package pdftex.def Info: ./spin_correlation_spin_singlet.png  used on input lin
@@ -482,7 +482,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
  []
 
 [6]
-<./evaluation_P.png, id=120, 855.195pt x 627.34375pt>
+<./evaluation_P.png, id=124, 855.195pt x 627.34375pt>
 File: ./evaluation_P.png Graphic file (type png)
 <use ./evaluation_P.png>
 Package pdftex.def Info: ./evaluation_P.png  used on input line 164.
@@ -524,25 +524,16 @@ LaTeX Info: Redefining \% on input line 27.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 245.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 245.
+Package rerunfilecheck Info: File `Bell_inequalities_CHSH.out' has not changed.
 
-
-Package rerunfilecheck Warning: File `Bell_inequalities_CHSH.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Bell_inequalities_CHSH.out':
-(rerunfilecheck)             Before: 2DA80ADE1CC9DB6A386A48F0F2DC0FD5;437
-(rerunfilecheck)             After:  B52436B7CB0CB0EC03250EE95049100A;560.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 733B7A4B0825E3D1D9ACF3656AE4B8C0;488.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
  ) 
 Here is how much of TeX's memory you used:
  8275 strings out of 481239
- 122682 string characters out of 5920377
- 413649 words of memory out of 5000000
- 23305 multiletter control sequences out of 15000+600000
+ 122684 string characters out of 5920377
+ 413693 words of memory out of 5000000
+ 23306 multiletter control sequences out of 15000+600000
  545127 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,12n,35p,2381b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -568,10 +559,10 @@ ts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmtt10.pfb>
-Output written on Bell_inequalities_CHSH.pdf (9 pages, 294906 bytes).
+Output written on Bell_inequalities_CHSH.pdf (9 pages, 294438 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 
