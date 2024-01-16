@@ -204,9 +204,22 @@ Para poder recrear este experimento en el contexto de la computación cuántica 
 S_1=A(B-b)+a(B+b)
 \end{equation} 
 cada observable puede tomar los valores $+1$ o $-1$ unicamente. Es claro que cada uno de los términos $B\pm b$ debe ser $0$ y el otro $\pm 2$. Por lo tanto $S_1=\pm 2$. El valor promedio de $S_1$ debe satisfacer la desigualdad
-\begin{equation}\label{eq::CHSH_inequality}
+\begin{equation}\label{eq::CHSH_inequality_S1}
 |\langle S_1 \rangle|\leq 2.
 \end{equation}
+Expandiendo en términos de $A, \, a,\, B$ y $b$ se obtiene
+\begin{equation}\label{eq:CHSH_inequality_S1_2}
+|\langle S_1 \rangle|=|\langle A B\rangle-\langle A b \rangle + \langle a B \rangle + \langle a b \rangle| \leq 2
+\end{equation}
+Se puede definir otra cantidad CHSH $S_2$ cómo:
+\begin{equation}
+S_2=A(B+b)-a(B-b)
+\end{equation}
+de nuevo expandiendo en términos de $A, \, a,\, B$ y $b$  lleva a otra desigualdad para el valor promedio de $S_2$
+\begin{equation}\label{eq::CHSH_inequality_S2}
+|\langle S_2 \rangle|=|\langle A B\rangle+\langle A b \rangle - \langle a B \rangle + \langle a b \rangle| \leq 2
+\end{equation}
+Si la mecánica cuántica puede describirse por teorías de variables ocultas y el principio de localidad de Einstein, la desigualdades \ref{eq:CHSH_inequality_S1_2} y \ref{eq::CHSH_inequality_S2} deben de cumplirse. Sin embargo se pueden usar ordenadores cuánticos para demostrar que estás desigualdades son violadas por lo que se puede concluir de los experimentos que aquí se detallan que la teoría cuántica no es compatible con teorías de variables ocultas locales.
 \section{Apéndice}\label{sec::appendix}
 
 \begin{thebibliography}{99}
