@@ -200,7 +200,7 @@ La desigualdad CHSH nombrada por las iniciales de los autores del teorema: Claus
 El premio Nobel 2022 fue galardonado a Alain Aspect, John Clauser y Anton Zellinger por su trabajo de vanguardia en información cuántica y en particular por sus experimentos con fotones entrelazados cuánticamente que demostraron sin lugar a duda la violación de las desigualdades de Bell.\\
 
 Para poder recrear este experimento en el contexto de la computación cuántica se crea un par de qubits entrelazados en dos bases distintas. Se etiqueta a la base del primer qubit $A$ y $a$ y a la segunda base $B$ y $b$. Esto permite computar la cantidad CHSH $S_1$ cómo:
-\begin{equation}
+\begin{equation}\label{eq::S_1}
 S_1=A(B-b)+a(B+b)
 \end{equation} 
 cada observable puede tomar los valores $+1$ o $-1$ unicamente. Es claro que cada uno de los términos $B\pm b$ debe ser $0$ y el otro $\pm 2$. Por lo tanto $S_1=\pm 2$. El valor promedio de $S_1$ debe satisfacer la desigualdad
@@ -220,6 +220,14 @@ de nuevo expandiendo en términos de $A, \, a,\, B$ y $b$  lleva a otra desigual
 |\langle S_2 \rangle|=|\langle A B\rangle+\langle A b \rangle - \langle a B \rangle + \langle a b \rangle| \leq 2
 \end{equation}
 Si la mecánica cuántica puede describirse por teorías de variables ocultas y el principio de localidad de Einstein, la desigualdades \ref{eq:CHSH_inequality_S1_2} y \ref{eq::CHSH_inequality_S2} deben de cumplirse. Sin embargo se pueden usar ordenadores cuánticos para demostrar que estás desigualdades son violadas por lo que se puede concluir de los experimentos que aquí se detallan que la teoría cuántica no es compatible con teorías de variables ocultas locales.
+\subsection{Violación de las desigualdades CHSH}
+Para demostrar la violación de las desigualdades CHSH se imagina a Alice y Bob se les da a cada uno, una parte de un sistema bipartito entrelazado cuánticamente. Cada uno de ellos realiza dos mediciones en su parte del sistema en dos bases distintas. Para continuar con el desarrollo presentado anteriormente se llama a la bases de Alice $A$ y $a$ y las bases en las que mide Bob $B$ y $b$. Entonces Alice y Bob tienen un qubit cada uno, por lo que cualquier medición puede resultar unicamente en $\pm 1$, típicamente se refiere a estos qubits cómo $|0\rangle$ y $|0\rangle$ se hace el recordatorio que estos son estados propios(\textit{eigenstates}) y una medición proyectiva resulta en los valores propios $+1$ y $-1$, respectivamente.\\
+
+La discusión anterior está un tanto sobresimplificada, ya que puede considerase que el resultado de un conjunto de mediciones de Alice y Bob pueden depender de un conjunto de variables ocultas locales, pero se puede demostrar con algunos desarrollos matemáticos(ver \cite{Clauser}), que incluso cuando ese es el caso el valor esperado o promedio de \ref{eq::CHSH_inequality_S1_2} y \ref{eq::CHSH_inequality_S2} no puede exceder el valor impuesto por las desigualdades referidas es decir que está limitado a dar cómo máximo el valor de $2$ si el principio de localidad de Einstein es valido también conocido como realismo local.\\
+
+El primer paso para probar estas desigualdades es construir el observable \ref{eq::S_1} donde $A$, $a$ son cada uno de los operadores $\{IX, IZ\}$\footnote{$I$ es la identidad y $X$ y $Z$ son los operadores de Pauli $S_x$ y $S_z$ respectivamente} para el qubit de Alice o el qubit $0$; y para $B$, $b$ se tiene que son $\{XI, ZI\}$ para el qubit de Bob o el qubit $1$.
+\subsection{Implementación en Qiskit}
+En la plataforma de computación cuántica Qiskit los operadores de Pauli en distintos qubits pueden construirse al especificar el orden de los operadores con una secuencia de caracteres, por ejemplo al instanciar al objeto de las librerías de Qiskit llamado \texttt{SparsePauliOp} con la secuencia de caracteres \texttt{'ZX'} cómo argumento se implica una medición de $\langle X \rangle$ en el qubit \texttt{q0} y una medición $\langle Z \rangle$ en el qubit \texttt{q1}.
 \section{Apéndice}\label{sec::appendix}
 
 \begin{thebibliography}{99}
