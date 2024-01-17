@@ -14,6 +14,10 @@
 \usepackage{mathtools}
 \usepackage{dirtytalk}
 \usepackage{booktabs}
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+\usepackage{algpseudocode}
+\usepackage{fancyvrb}
 
 \begin{document}
 \pagenumbering{arabic}
@@ -227,7 +231,10 @@ La discusión anterior está un tanto sobresimplificada, ya que puede consideras
 
 El primer paso para probar estas desigualdades es construir el observable \ref{eq::S_1} donde $A$, $a$ son cada uno de los operadores $\{IX, IZ\}$\footnote{$I$ es la identidad y $X$ y $Z$ son los operadores de Pauli $S_x$ y $S_z$ respectivamente} para el qubit de Alice o el qubit $0$; y para $B$, $b$ se tiene que son $\{XI, ZI\}$ para el qubit de Bob o el qubit $1$.
 \subsection{Implementación en Qiskit}
-En la plataforma de computación cuántica Qiskit los operadores de Pauli en distintos qubits pueden construirse al especificar el orden de los operadores con una secuencia de caracteres, por ejemplo al instanciar al objeto de las librerías de Qiskit llamado \texttt{SparsePauliOp} con la secuencia de caracteres \texttt{'ZX'} cómo argumento se implica una medición de $\langle X \rangle$ en el qubit \texttt{q0} y una medición $\langle Z \rangle$ en el qubit \texttt{q1}.
+En la plataforma de computación cuántica Qiskit los operadores de Pauli en distintos qubits pueden construirse al especificar el orden de los operadores con una secuencia de caracteres, por ejemplo al instanciar al objeto de las librerías de Qiskit llamado \texttt{SparsePauliOp} con la secuencia de caracteres \texttt{'ZX'} cómo argumento se implica una medición de $\langle X \rangle$ en el qubit \texttt{q0} y una medición $\langle Z \rangle$ en el qubit \texttt{q1}. Este producto tensorial, que se puede entender cómo combinar operadores para distintos qubits del sistema bipartito puede implementarse explícitamente usando el método de Qiskit \texttt{.tensor()}, adicionalmente se pueden combinar operadores que actúan sobre el mismo qubit con el método \texttt{.compose()}. Por ejemplo todos los siguientes comandos crean el mismo operador de Pauli
+
+\VerbatimInput{pauli_example.txt}
+
 \section{Apéndice}\label{sec::appendix}
 
 \begin{thebibliography}{99}

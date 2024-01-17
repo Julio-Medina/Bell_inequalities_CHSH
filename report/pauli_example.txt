@@ -1,0 +1,6 @@
+from qiskit.quantum_info import SparsePauliOp
+
+ZX = SparsePauliOp('ZX')
+ZX = SparsePauliOp(['ZX'], coeffs=[1.]) # extensible a una suma de operadores de Pauli
+ZX = SparsePauliOp('Z').tensor(SparsePauliOp('X')) # extensible a un producto tensorial de operadores de Pauli
+ZX = SparsePauliOp('XZ').compose(SparsePauliOp('YY')) # producto composicional de operadores de Pauli
