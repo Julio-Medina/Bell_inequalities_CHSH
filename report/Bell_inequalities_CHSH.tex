@@ -241,7 +241,10 @@ Con está breve introducción a la versatilidad de Qiskit el primer paso para ha
 \end{equation}
 Usando la primitiva \texttt{Estimator} de Qiskit se pueden obtener relativamente fácil los valores esperados necesarios: $(\langle AB \rangle, \langle Ab\rangle, \langle aB \rangle, \langle ab\rangle)$. Habiendo calculado estos valores esperado se pueden calcular las dos cantidades CHSH $\langle S_1\rangle$ y $\langle S_2\rangle$.\\
 
-Para crear el estado de Bell \ref{eq::Bell_state} se necesita utilizar un compuerta de Hadamard seguido por una compuerta \texttt{CNOT}(ver \cite{Medina}) con qubit el mismo qubit objetivo al cual se ha operado con el operador de Hadamard. Debido a la simplificación discutida previamente en la que solo se hacen mediciones en las bases $X$ y $Z$ se necesita hacer una rotación del estado de Bell alrededor de la esfera de Bloch que equivale a cambiar la base de medición(ver \cite{Qiskit})
+Para crear el estado de Bell \ref{eq::Bell_state} se necesita utilizar un compuerta de Hadamard seguido por una compuerta \texttt{CNOT}(ver \cite{Medina}) con qubit el mismo qubit objetivo al cual se ha operado con el operador de Hadamard. Debido a la simplificación discutida previamente en la que solo se hacen mediciones en las bases $X$ y $Z$ se necesita hacer una rotación del estado de Bell alrededor de la esfera de Bloch que equivale a cambiar la base de medición(ver \cite{Qiskit}). Esto puede lograrse aplicando una compuerta $R_y(\theta)$, donde $\theta$ es un parámetro(\texttt{Parameter}) a ser especificado por el una llamada a la API del \texttt{Estimator}. Esto resulta en el estado
+\begin{equation}\label{eq::psi_state}
+|\psi\rangle=\frac{1}{\sqrt{2}}\Bigg((\cos\bigg(\frac{\theta}{2} \bigg))|00\rangle+\sin\bigg(\frac{\theta}{2} \bigg))|11\rangle\Bigg)
+\end{equation}
 \section{Apéndice}\label{sec::appendix}
 
 \begin{thebibliography}{99}
