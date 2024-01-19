@@ -1,0 +1,10 @@
+from qiskit.circuit import Parameter
+
+theta = Parameter('theta')
+
+qc = QuantumCircuit(2)
+qc.h(0)
+qc.cx(0, 1)
+qc.ry(theta, 0)
+
+qc.draw('mpl')

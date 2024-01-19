@@ -235,7 +235,12 @@ En la plataforma de computación cuántica Qiskit los operadores de Pauli en dis
 
 \VerbatimInput{pauli_example.txt}
 
-Con está breve introducción a la versatilidad de Qiskit el primer paso para hacer el experimento en un ordenador cuántico es crear un par de qubits entrelazados al crear el estado de Bell(ver \cite{Medina})
+
+Con está breve introducción a la versatilidad de Qiskit el primer paso para hacer el experimento en un ordenador cuántico es crear el operador para un testigo CHSH utilizando \texttt{SparsePauliOp}, el código es relativamente sencillo
+
+\VerbatimInput{observable}
+
+Después se construye un par de qubits entrelazados al crear el estado de Bell(ver \cite{Medina})
 \begin{equation}\label{eq::Bell_state}
 |\Phi^{+}\rangle=\frac{|00\rangle+|11\rangle}{\sqrt{2}}
 \end{equation}
@@ -245,7 +250,19 @@ Para crear el estado de Bell \ref{eq::Bell_state} se necesita utilizar un compue
 \begin{equation}\label{eq::psi_state}
 |\psi\rangle=\frac{1}{\sqrt{2}}\Bigg((\cos\bigg(\frac{\theta}{2} \bigg))|00\rangle+\sin\bigg(\frac{\theta}{2} \bigg))|11\rangle\Bigg)
 \end{equation}
-\section{Apéndice}\label{sec::appendix}
+El código de Python que implementa el estado \ref{eq::psi_state} es el siguiente:
+\VerbatimInput{psi_state.txt}
+El circuito cuántico correspondiente se visualiza en la siguiente figura
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.2]{./psi_state_circuit.png} 
+\end{center} 
+\caption{Circuito cuántico para construir \ref{eq::psi_state}}
+\label{fig::psi_state_circuit}
+\end{figure}
+\pagebreak
+%\section{Apéndice}\label{sec::appendix}
+
 
 \begin{thebibliography}{99}
 %% La bibliografía se ordena en orden alfabético respecto al apellido del 

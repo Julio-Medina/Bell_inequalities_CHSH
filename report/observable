@@ -1,0 +1,1 @@
+obsv = SparsePauliOp(['XX','ZX','XZ','ZZ'], coeffs=[1.,-1.,1.,1.]) # crea el operador para un testigo CHSH
