@@ -1,0 +1,10 @@
+estimator = Estimator()
+job = estimator.run([qc]*len(angles), observables=[obsv]*len(angles), parameter_values=angles)
+exps = job.result().values
+
+plt.plot(angles, exps, marker='x', ls='-', color='green')
+plt.plot(angles, [2]*len(angles), ls='--', color='red', label='Classical Bound')
+plt.plot(angles, [-2]*len(angles), ls='--', color='red')
+plt.xlabel('angle (rad)')
+plt.ylabel('CHSH Witness')
+plt.legend(loc=4)

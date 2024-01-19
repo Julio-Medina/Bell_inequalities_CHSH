@@ -268,6 +268,17 @@ El siguiente paso consiste en especificar una secuencia(\texttt{Sequence}) del p
 Para esto se asegura tener por lo menos tres puntos que violen la desigualdad. Para esto se parametrizan una lista o arreglo del ángulo en el circuito \ref{fig::psi_state_circuit} en radianes. Vale la pena notar que el tipo(\texttt{type}) para el argumento de los valores parametrizados(\texttt{parameter\_values}) es de tipo \texttt{Sequence[Sequence[float]]}. Esto se crea con una línea de código
 \VerbatimInput{angles}
 
+Por último se prueban los ángulos y el observable creados previamente usando el estimador(\texttt{Estimator}) para ver claramente la violación de la desigualdad CHSH
+\VerbatimInput{Estimator}
+En la siguiente figura se pueden ver 3 puntos fuera de los límites impuestos por la desigualdad CHSH
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.18]{./CHSH_violation.png} 
+\end{center} 
+\caption{Se pueden ver claramente como el resultado de los valores esperados de los observables violan la desigualdad CHSH}
+\label{fig::CHSH_violation}
+\end{figure}
+\pagebreak
 %\section{Apéndice}\label{sec::appendix}
 
 
