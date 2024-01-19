@@ -261,6 +261,13 @@ El circuito cuántico correspondiente se visualiza en la siguiente figura
 \label{fig::psi_state_circuit}
 \end{figure}
 \pagebreak
+El siguiente paso consiste en especificar una secuencia(\texttt{Sequence}) del parámetro $\theta$ definido previamente que muestre una clara violación de desigualdad CHSH, es decir
+\begin{equation}
+|\langle \text{CHSH}\rangle|>2
+\end{equation}
+Para esto se asegura tener por lo menos tres puntos que violen la desigualdad. Para esto se parametrizan una lista o arreglo del ángulo en el circuito \ref{fig::psi_state_circuit} en radianes. Vale la pena notar que el tipo(\texttt{type}) para el argumento de los valores parametrizados(\texttt{parameter\_values}) es de tipo \texttt{Sequence[Sequence[float]]}. Esto se crea con una línea de código
+\VerbatimInput{angles}
+
 %\section{Apéndice}\label{sec::appendix}
 
 
