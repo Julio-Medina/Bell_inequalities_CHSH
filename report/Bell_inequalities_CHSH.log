@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  18 JAN 2024 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.5.30)  23 JAN 2024 22:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,7 +496,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--64
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./spin_correlation_spin_singlet.png, id=62, 1327.96124pt x 213.79875pt>
+<./spin_correlation_spin_singlet.png, id=65, 1327.96124pt x 213.79875pt>
 File: ./spin_correlation_spin_singlet.png Graphic file (type png)
 <use ./spin_correlation_spin_singlet.png>
 Package pdftex.def Info: ./spin_correlation_spin_singlet.png  used on input lin
@@ -535,7 +535,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
  []
 
 [6]
-<./evaluation_P.png, id=128, 855.195pt x 627.34375pt>
+<./evaluation_P.png, id=132, 855.195pt x 627.34375pt>
 File: ./evaluation_P.png Graphic file (type png)
 <use ./evaluation_P.png>
 Package pdftex.def Info: ./evaluation_P.png  used on input line 168.
@@ -575,7 +575,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
  []
 
-<./psi_state_circuit.png, id=178, 510.90875pt x 269.005pt>
+<./psi_state_circuit.png, id=182, 510.90875pt x 269.005pt>
 File: ./psi_state_circuit.png Graphic file (type png)
 <use ./psi_state_circuit.png>
 Package pdftex.def Info: ./psi_state_circuit.png  used on input line 258.
@@ -584,7 +584,7 @@ Package pdftex.def Info: ./psi_state_circuit.png  used on input line 258.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [10]
-<./CHSH_violation.png, id=190, 713.66624pt x 547.04375pt>
+<./CHSH_violation.png, id=194, 713.66624pt x 547.04375pt>
 File: ./CHSH_violation.png Graphic file (type png)
 <use ./CHSH_violation.png>
 Package pdftex.def Info: ./CHSH_violation.png  used on input line 276.
@@ -598,87 +598,88 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.283 
-       <./psi_state_circuit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+l.283 \section
+              {Conclusiones} <./psi_state_circuit.png>] [12pdfTeX warning (ext4
+): destination with the same identifier (name{figure.4}) has been already used,
+ duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.298 \begin
+            {thebibliography}{99} <./CHSH_violation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 []\OT1/cmr/m/n/10 Julio Me-di-na. \OT1/cmr/m/it/10 Re-por-te de Se-mi-na-rio 1.
  Compu-taci^^Son Cu^^Santi-ca\OT1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 []$\OT1/cmtt/m/n/10 https : / / github . com / Julio-[]Medina / Seminario / blo
 b / main / Reporte _
  []
 
 
-Underfull \hbox (badness 5681) in paragraph at lines 312--313
+Underfull \hbox (badness 5681) in paragraph at lines 325--326
 []\OT1/cmr/m/n/10 Yasaman Bah-ri, Jo-nat-han Kad-mon, Jef-frey Pen-ning-ton, Sa
 m S.
  []
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.317 \end{thebibliography}
-                            <./CHSH_violation.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
-
-(./Bell_inequalities_CHSH.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
+[13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
+ (./Bell_inequalities_CHSH.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
 Package rerunfilecheck Info: File `Bell_inequalities_CHSH.out' has not changed.
 
-(rerunfilecheck)             Checksum: 4D1CAE524D88F55FB2287F7EB60768C4;605.
+(rerunfilecheck)             Checksum: 9A0F25305F9C16C4AE70643DAB80A7B8;652.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
- 9254 strings out of 481239
- 137389 string characters out of 5920377
+ 9259 strings out of 481239
+ 137445 string characters out of 5920377
  430938 words of memory out of 5000000
- 24243 multiletter control sequences out of 15000+600000
- 545494 words of font info for 75 fonts, out of 8000000 for 9000
+ 24246 multiletter control sequences out of 15000+600000
+ 545829 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,35p,2381b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Bell_inequalities_CHSH.pdf (13 pages, 377068 bytes).
+ 34i,12n,35p,2381b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type
+1/public/cm-super/sfrm1000.pfb>
+Output written on Bell_inequalities_CHSH.pdf (13 pages, 383696 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 282 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 342 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
