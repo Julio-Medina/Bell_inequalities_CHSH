@@ -76,11 +76,7 @@ Depending on how the repository is organized, these files may be placed directly
 
 The starting point is the two-particle spin-singlet state. When two spin-1/2 particles are prepared in this state, measurements along the same direction are perfectly anti-correlated.
 
-$$
-\left|\psi^{-}\right\rangle
-=
-\frac{\left|01\right\rangle - \left|10\right\rangle}{\sqrt{2}}
-$$
+The state used here is the antisymmetric Bell state, usually called the **psi-minus** or **singlet** state. The full LaTeX form is kept in the report instead of being repeated in this README, because this particular ket expression was being picked up badly by the Markdown preview.
 
 The hidden-variable argument tries to assign definite outcomes in advance for measurements along different directions. Under locality, these preassigned outcomes imply Bell-type inequalities. One form discussed in the report can be written schematically as:
 
