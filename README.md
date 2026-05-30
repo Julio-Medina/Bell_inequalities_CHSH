@@ -279,7 +279,11 @@ Make sure the referenced images and snippet files are available in the paths exp
 
 ## Notes on the Markdown equations
 
-The main formulas in this README use GitHub-compatible display math with `$$ ... $$`. Section titles are intentionally kept as plain text, because GitHub may not render math reliably inside Markdown headings. This keeps the equations readable in the repository while avoiding full LaTeX environments such as `\begin{equation}` or custom commands from the report preamble.
+The main formulas in this README use GitHub-compatible display math with `$$ ... $$`.
+
+The section titles are intentionally plain text. No Markdown heading in this file contains inline math, dollar-delimited math, or raw LaTeX commands. This avoids GitHub rendering problems with equations inside headings while still keeping the equations readable and attractive below the relevant text.
+
+The README also avoids full LaTeX environments such as `\begin{equation}` and custom commands from the report preamble.
 
 The full mathematical derivation is still in the LaTeX report, where labels, references, figures, and longer aligned derivations are handled properly.
 
