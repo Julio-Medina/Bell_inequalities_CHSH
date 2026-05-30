@@ -20,15 +20,15 @@ The report first discusses this problem using spin-singlet correlations. Then it
 
 In plain terms, the classical CHSH limit is:
 
-```text
-|<S>| <= 2
-```
+$$
+\left|\langle S \rangle\right| \leq 2
+$$
 
 For a suitable entangled quantum state and suitable measurement bases, quantum mechanics can produce:
 
-```text
-|<S>| > 2
-```
+$$
+\left|\langle S \rangle\right| > 2
+$$
 
 This is the violation shown in the Qiskit part of the project.
 
@@ -76,17 +76,27 @@ Depending on how the repository is organized, these files may be placed directly
 
 The starting point is the two-particle spin-singlet state. When two spin-1/2 particles are prepared in this state, measurements along the same direction are perfectly anti-correlated.
 
+$$
+\left|\psi^{-}\right\rangle
+=
+\frac{\left|01\right\rangle - \left|10\right\rangle}{\sqrt{2}}
+$$
+
 The hidden-variable argument tries to assign definite outcomes in advance for measurements along different directions. Under locality, these preassigned outcomes imply Bell-type inequalities. One form discussed in the report can be written schematically as:
 
-```text
-P(a+, b+) <= P(a+, c+) + P(c+, b+)
-```
+$$
+P\!\left(\mathbf{\hat a}^{+};\mathbf{\hat b}^{+}\right)
+\leq
+P\!\left(\mathbf{\hat a}^{+};\mathbf{\hat c}^{+}\right)
++
+P\!\left(\mathbf{\hat c}^{+};\mathbf{\hat b}^{+}\right)
+$$
 
 Quantum mechanics predicts probabilities that do not always satisfy this inequality. For a particular geometric choice of measurement directions, the report obtains a contradiction of the form:
 
-```text
-0.500 <= 0.292
-```
+$$
+0.500 \nleq 0.292
+$$
 
 The point of this calculation is not the numbers by themselves, but what they mean: the quantum prediction violates the restriction imposed by local hidden-variable reasoning.
 
@@ -96,33 +106,49 @@ The CHSH version uses two possible measurements for Alice and two possible measu
 
 The report labels Alice's observables as:
 
-```text
-A, a
-```
+$$
+A,\; a \in \{IX,\, IZ\}
+$$
 
 and Bob's observables as:
 
-```text
-B, b
-```
+$$
+B,\; b \in \{XI,\, ZI\}
+$$
 
 One CHSH quantity is built from the combination:
 
-```text
-S1 = A(B - b) + a(B + b)
-```
+$$
+S_1 = A(B-b) + a(B+b)
+$$
 
 Expanding this in terms of expectation values gives the classical bound:
 
-```text
-|<AB> - <Ab> + <aB> + <ab>| <= 2
-```
+$$
+\left|
+\langle AB\rangle
+-
+\langle Ab\rangle
++
+\langle aB\rangle
++
+\langle ab\rangle
+\right| \leq 2
+$$
 
 A second equivalent CHSH expression is also considered:
 
-```text
-|<AB> + <Ab> - <aB> + <ab>| <= 2
-```
+$$
+\left|
+\langle AB\rangle
++
+\langle Ab\rangle
+-
+\langle aB\rangle
++
+\langle ab\rangle
+\right| \leq 2
+$$
 
 In a local hidden-variable model, these quantities cannot exceed 2 in absolute value. In the quantum-circuit simulation, the expectation values are computed for an entangled state and the bound is violated.
 
@@ -132,9 +158,11 @@ The computational part uses Qiskit to prepare a Bell state and evaluate CHSH obs
 
 The Bell state used is:
 
-```text
-|Phi+> = (|00> + |11>) / sqrt(2)
-```
+$$
+\left|\Phi^{+}\right\rangle
+=
+\frac{\left|00\right\rangle + \left|11\right\rangle}{\sqrt{2}}
+$$
 
 The circuit is built using:
 
@@ -148,9 +176,9 @@ The Pauli operators are used to represent measurements in different bases. The r
 
 The experiment then evaluates the CHSH observable for a sequence of angles and plots the resulting expectation values. The relevant result is that some points lie outside the classical interval:
 
-```text
--2 <= <CHSH> <= 2
-```
+$$
+-2 \leq \left\langle \mathrm{CHSH} \right\rangle \leq 2
+$$
 
 This is the numerical evidence of CHSH violation in the simulation.
 
@@ -158,9 +186,9 @@ This is the numerical evidence of CHSH violation in the simulation.
 
 When the experiment is run correctly, the output should include CHSH expectation values. At least some of them should satisfy:
 
-```text
-|<CHSH>| > 2
-```
+$$
+\left|\left\langle \mathrm{CHSH} \right\rangle\right| > 2
+$$
 
 The report includes a plot named:
 
@@ -251,9 +279,9 @@ Make sure the referenced images and snippet files are available in the paths exp
 
 ## Notes on the Markdown equations
 
-This README intentionally avoids heavy LaTeX formatting. Some Markdown viewers do not render LaTeX equations well, so the important formulas are written in plain text blocks.
+The main formulas in this README use GitHub-compatible display math with `$$ ... $$`. This keeps the equations readable in the repository while avoiding full LaTeX environments such as `\begin{equation}` or custom commands from the report preamble.
 
-The full mathematical derivation is in the LaTeX report, where the equations are easier to read and compile properly.
+The full mathematical derivation is still in the LaTeX report, where labels, references, figures, and longer aligned derivations are handled properly.
 
 ## References
 
