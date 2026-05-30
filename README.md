@@ -1,184 +1,244 @@
-# Bell Inequalities and CHSH Violation with Qiskit
+# Bell Inequalities and CHSH Violation in Qiskit
 
-This repository contains a theoretical and computational study of Bell's theorem, the CHSH inequality, and the incompatibility between local hidden-variable theories and the predictions of quantum mechanics. The project develops the physics background from spin correlations and the Einstein-Podolsky-Rosen paradox, then implements a quantum-circuit experiment in Qiskit to show a violation of the CHSH bound.
+This repository contains the material for my seminar report **"Prueba del Teorema de Bell y violación desigualdad CHSH"**, written for the Master's program in Physics at the Universidad de San Carlos de Guatemala.
 
-The main report is written in LaTeX and is based on the seminar work:
+The project has two parts that should be read together:
 
-> **Prueba del Teorema de Bell y violación desigualdad CHSH**  
-> Lic. Julio A. Medina  
-> Universidad de San Carlos de Guatemala, Escuela de Ciencias Físicas y Matemáticas  
-> Maestría en Física
+1. a theoretical derivation of Bell-type inequalities starting from spin correlations and the EPR discussion, and
+2. a small Qiskit experiment that builds an entangled two-qubit state and evaluates CHSH observables to show a violation of the classical bound.
 
-## Overview
+The main idea is simple but deep: if nature could be explained by local hidden variables, then the correlations measured by Alice and Bob would have to satisfy a strict classical limit. Quantum mechanics predicts, and quantum experiments reproduce, correlations that go beyond that limit.
 
-Bell's theorem shows that no physical theory based on local hidden variables can reproduce all predictions of quantum mechanics. The CHSH inequality, introduced by Clauser, Horne, Shimony, and Holt, provides an experimentally testable form of Bell's theorem.
+## What this repository is about
 
-This project explains and demonstrates that quantum-mechanical correlations from entangled states can violate the classical CHSH bound:
+Bell's theorem gives a way to distinguish between two views of physical reality:
 
-\[
-|\langle S \rangle| \leq 2
-\]
+- **local hidden-variable theories**, where measurement outcomes are assumed to be predetermined by local properties of the particles, and
+- **quantum mechanics**, where entangled states can produce correlations that cannot be explained by such local predetermined values.
 
-while quantum mechanics can produce values larger than 2 for suitable measurement settings. The computational part uses Qiskit to construct entangled two-qubit states, define Pauli observables, estimate expectation values, and visualize CHSH inequality violations.
+The report first discusses this problem using spin-singlet correlations. Then it moves to the CHSH inequality, which is the form of Bell's theorem most commonly used in experiments.
 
-## Main Goals
+In plain terms, the classical CHSH limit is:
 
-- Explain the EPR paradox and its connection to locality, realism, and hidden-variable theories.
-- Derive Bell-type inequalities from spin correlations in a two-particle singlet state.
-- Introduce the CHSH inequality as an experimentally testable version of Bell's theorem.
-- Build a two-qubit Bell-state circuit using Qiskit.
-- Define CHSH observables with Pauli operators.
-- Use Qiskit's estimator workflow to compute expectation values.
-- Show that quantum predictions violate the classical CHSH limit.
+```text
+|<S>| <= 2
+```
 
-## Physics Background
+For a suitable entangled quantum state and suitable measurement bases, quantum mechanics can produce:
 
-The theoretical discussion begins with a two-particle spin-singlet state:
+```text
+|<S>| > 2
+```
 
-\[
-|\text{singlet}\rangle = \frac{1}{\sqrt{2}}\left(|\hat{z}+;\hat{z}-\rangle - |\hat{z}-;\hat{z}+\rangle\right).
-\]
+This is the violation shown in the Qiskit part of the project.
 
-This state exhibits perfect anti-correlation when both particles are measured along the same axis. The report then discusses how this behavior becomes non-classical when different measurement bases are allowed.
+## Contents
 
-The project covers:
+The report covers the following topics:
 
-- spin-\(1/2\) systems,
-- angular momentum conservation,
-- measurement correlations,
-- local hidden-variable assignments,
-- Bell's inequality,
-- quantum-mechanical probabilities,
-- and the geometric violation of Bell-type bounds.
+- EPR paradox and the question of whether quantum mechanics is complete.
+- Spin-1/2 systems and spin-singlet states.
+- Perfect anti-correlation when both particles are measured along the same direction.
+- Bell's inequality from local hidden-variable assumptions.
+- Quantum-mechanical probabilities for different measurement directions.
+- CHSH inequality as an experimentally testable Bell inequality.
+- Construction of Bell states with quantum circuits.
+- Use of Pauli operators and Qiskit observables.
+- Numerical evaluation of CHSH expectation values.
+- Visualization of the region where the CHSH bound is violated.
 
-## CHSH Inequality
+## Main files
 
-The CHSH formulation considers two possible measurement bases for Alice and two possible measurement bases for Bob. With observables \(A\), \(a\), \(B\), and \(b\), one CHSH quantity is
+The central file is:
 
-\[
-S_1 = A(B-b) + a(B+b),
-\]
+```text
+Bell_inequalities_CHSH.tex
+```
 
-which leads to the inequality
+This is the LaTeX source of the full report.
 
-\[
-|\langle AB\rangle - \langle Ab\rangle + \langle aB\rangle + \langle ab\rangle| \leq 2.
-\]
+The report also refers to several auxiliary files and generated figures, including code snippets and plots such as:
 
-A second CHSH quantity is also considered:
+```text
+pauli_example.txt
+observable
+psi_state.txt
+angles
+Estimator
+psi_state_circuit.png
+CHSH_violation.png
+evaluation_P.png
+```
 
-\[
-|\langle AB\rangle + \langle Ab\rangle - \langle aB\rangle + \langle ab\rangle| \leq 2.
-\]
+Depending on how the repository is organized, these files may be placed directly in the root directory or moved into folders such as `figures/`, `src/`, or `notebooks/`.
 
-If local hidden-variable theories were sufficient to describe quantum correlations, these inequalities would always hold. The Qiskit implementation demonstrates that entangled quantum states can violate them.
+## Theory summary
 
-## Qiskit Implementation
+The starting point is the two-particle spin-singlet state. When two spin-1/2 particles are prepared in this state, measurements along the same direction are perfectly anti-correlated.
 
-The computational experiment uses Qiskit to construct and evaluate a CHSH test. The implementation includes:
+The hidden-variable argument tries to assign definite outcomes in advance for measurements along different directions. Under locality, these preassigned outcomes imply Bell-type inequalities. One form discussed in the report can be written schematically as:
 
-1. Construction of a Bell state:
+```text
+P(a+, b+) <= P(a+, c+) + P(c+, b+)
+```
 
-   \[
-   |\Phi^+\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}.
-   \]
+Quantum mechanics predicts probabilities that do not always satisfy this inequality. For a particular geometric choice of measurement directions, the report obtains a contradiction of the form:
 
-2. Application of parameterized rotations to vary the measurement basis.
-3. Definition of Pauli observables using `SparsePauliOp`.
-4. Evaluation of expectation values with Qiskit's estimator primitive.
-5. Computation of CHSH values across several angles.
-6. Visualization of the violation region where
+```text
+0.500 <= 0.292
+```
 
-   \[
-   |\langle \text{CHSH} \rangle| > 2.
-   \]
+The point of this calculation is not the numbers by themselves, but what they mean: the quantum prediction violates the restriction imposed by local hidden-variable reasoning.
 
-The report includes circuit diagrams and a CHSH violation plot showing points outside the classical limit.
+## CHSH experiment
 
-## Suggested Repository Structure
+The CHSH version uses two possible measurements for Alice and two possible measurements for Bob.
 
-A clean repository layout could look like this:
+The report labels Alice's observables as:
+
+```text
+A, a
+```
+
+and Bob's observables as:
+
+```text
+B, b
+```
+
+One CHSH quantity is built from the combination:
+
+```text
+S1 = A(B - b) + a(B + b)
+```
+
+Expanding this in terms of expectation values gives the classical bound:
+
+```text
+|<AB> - <Ab> + <aB> + <ab>| <= 2
+```
+
+A second equivalent CHSH expression is also considered:
+
+```text
+|<AB> + <Ab> - <aB> + <ab>| <= 2
+```
+
+In a local hidden-variable model, these quantities cannot exceed 2 in absolute value. In the quantum-circuit simulation, the expectation values are computed for an entangled state and the bound is violated.
+
+## Qiskit implementation
+
+The computational part uses Qiskit to prepare a Bell state and evaluate CHSH observables.
+
+The Bell state used is:
+
+```text
+|Phi+> = (|00> + |11>) / sqrt(2)
+```
+
+The circuit is built using:
+
+- a Hadamard gate,
+- a CNOT gate,
+- a parameterized Ry rotation,
+- Pauli observables constructed with `SparsePauliOp`, and
+- Qiskit's estimator workflow to compute expectation values.
+
+The Pauli operators are used to represent measurements in different bases. The report discusses how strings such as `ZX` encode tensor products of Pauli operators acting on different qubits.
+
+The experiment then evaluates the CHSH observable for a sequence of angles and plots the resulting expectation values. The relevant result is that some points lie outside the classical interval:
+
+```text
+-2 <= <CHSH> <= 2
+```
+
+This is the numerical evidence of CHSH violation in the simulation.
+
+## Expected result
+
+When the experiment is run correctly, the output should include CHSH expectation values. At least some of them should satisfy:
+
+```text
+|<CHSH>| > 2
+```
+
+The report includes a plot named:
+
+```text
+CHSH_violation.png
+```
+
+where the violation is shown visually.
+
+## Suggested repository structure
+
+A clean organization for the repository would be:
 
 ```text
 .
 ├── README.md
 ├── Bell_inequalities_CHSH.tex
 ├── figures/
-│   ├── spin_correlation_spin_singlet.png
 │   ├── evaluation_P.png
 │   ├── psi_state_circuit.png
 │   └── CHSH_violation.png
+├── snippets/
+│   ├── pauli_example.txt
+│   ├── observable
+│   ├── psi_state.txt
+│   ├── angles
+│   └── Estimator
 ├── notebooks/
 │   └── chsh_qiskit_experiment.ipynb
 ├── src/
 │   └── chsh_experiment.py
-├── outputs/
-│   └── chsh_results.csv
 └── requirements.txt
 ```
 
-The exact structure may differ, but separating the LaTeX report, source code, notebooks, figures, and generated outputs will make the repository easier to navigate.
+The repository does not need to follow this exact layout, but keeping the report, figures, snippets, notebooks, and source code separated makes the project easier to maintain.
 
-## Getting Started
+## How to run the Qiskit experiment
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<your-username>/<your-repository>.git
-cd <your-repository>
-```
-
-### 2. Create a virtual environment
+Create a virtual environment:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-On Windows PowerShell:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-```
-
-### 3. Install dependencies
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-A minimal `requirements.txt` could include:
+A minimal `requirements.txt` may look like:
 
 ```text
 qiskit
 qiskit-aer
-matplotlib
 numpy
+matplotlib
 jupyter
 ```
 
-Depending on the Qiskit version used, the estimator interface may require package-specific updates.
-
-## Running the Experiment
-
-If the project includes a Python script, run:
+Run the experiment as a script:
 
 ```bash
 python src/chsh_experiment.py
 ```
 
-If the project uses a notebook, open:
+Or open the notebook:
 
 ```bash
 jupyter notebook notebooks/chsh_qiskit_experiment.ipynb
 ```
 
-The expected output is a set of CHSH expectation values and a plot showing the violation of the classical bound \(\pm 2\).
+The exact command depends on whether the implementation is stored as a script, a notebook, or code snippets included in the LaTeX report.
 
-## Building the LaTeX Report
+## How to compile the report
 
-To compile the report locally, run:
+To compile the LaTeX report locally, run:
 
 ```bash
 pdflatex Bell_inequalities_CHSH.tex
@@ -187,21 +247,17 @@ pdflatex Bell_inequalities_CHSH.tex
 
 The second compilation helps resolve references and figure labels.
 
-Make sure the image files referenced by the LaTeX document are available in the expected paths.
+Make sure the referenced images and snippet files are available in the paths expected by the `.tex` file.
 
-## Key Results
+## Notes on the Markdown equations
 
-The project shows that:
+This README intentionally avoids heavy LaTeX formatting. Some Markdown viewers do not render LaTeX equations well, so the important formulas are written in plain text blocks.
 
-- Bell inequalities follow from assumptions of locality and predetermined measurement outcomes.
-- Quantum mechanics predicts correlations that cannot be reproduced by local hidden-variable theories.
-- The CHSH inequality provides a practical experimental test of Bell's theorem.
-- A Qiskit simulation of entangled qubits can produce CHSH values larger than the classical limit of 2.
-- The result supports the standard conclusion that local hidden-variable theories are incompatible with quantum-mechanical predictions.
+The full mathematical derivation is in the LaTeX report, where the equations are easier to read and compile properly.
 
 ## References
 
-The report discusses and cites foundational and pedagogical sources, including:
+The report cites foundational and pedagogical sources, including:
 
 - J. S. Bell, *On the Einstein Podolsky Rosen Paradox*.
 - J. F. Clauser, M. A. Horne, A. Shimony, and R. A. Holt, *Proposed Experiment to Test Local Hidden-Variable Theories*.
@@ -209,19 +265,15 @@ The report discusses and cites foundational and pedagogical sources, including:
 - J. J. Sakurai, *Modern Quantum Mechanics*.
 - M. A. Nielsen and I. L. Chuang, *Quantum Computation and Quantum Information*.
 - R. P. Feynman, *Simulating Physics with Computers*.
-- Qiskit documentation and textbook material.
+- N. David Mermin, *Quantum Computer Science: An Introduction*.
+- Qiskit textbook and documentation material.
 
-## Notes for Future Improvements
+## Future work
 
-Possible next steps for the repository include:
+Some natural next steps for this project are:
 
-- Add a reproducible notebook with all Qiskit code used in the report.
-- Save numerical CHSH results to a CSV file for validation.
-- Include a dedicated `figures/` directory and update LaTeX paths accordingly.
-- Add a small test script to verify that the computed CHSH values exceed 2 for selected angles.
-- Document the Qiskit version used, since APIs such as `Estimator` may change across releases.
-- Add an English abstract if the repository is intended for an international audience.
-
-## License
-
-Add a license that matches the intended use of this work. For academic repositories, common choices include MIT for code and Creative Commons licenses for written material.
+- move the Qiskit code from report snippets into a reproducible notebook or Python script,
+- save the CHSH expectation values to a CSV file,
+- add a short explanation of each generated figure,
+- include instructions for running the same experiment on a simulator and, later, on IBM Quantum hardware,
+- add a small section comparing the ideal simulator result with noisy real-device behavior.
